@@ -1,0 +1,53 @@
+<view class='tousu_content'>
+  <!-- 暂无数据 -->
+  <noData wx:if="{{nodata == 1}}"></noData> 
+
+  <scroll-view scroll-y='true' class="yscroll_bar" enable-back-to-top="{{true}}" bindscrolltolower="loadMore"
+      style='height:{{windowHeight}}px' enable-flex='{{true}}'>
+    <block wx:for='{{tousu}}' wx:key='{{index}}'>
+      <view class="tousu_li">
+        <!-- 投诉主题 -->
+        <view class="zhuti tow gonggong">
+          <view class="left leftcommon">投诉主题</view>
+          <view class="right rightcommon" wx:if='{{item.theme == 1}}'>景区</view>
+          <view class="right rightcommon" wx:if='{{item.theme == 2}}'>购物</view>
+          <view class="right rightcommon" wx:if='{{item.theme == 3}}'>酒店</view>
+          <view class="right rightcommon" wx:if='{{item.theme == 4}}'>饮食</view>
+        </view>
+
+        <!-- 投诉事由 -->
+        <view class="shiyou tow gonggong">
+          <view class="left leftcommon">投诉原因</view>
+          <view class="right rightcommon">{{item.content}}</view>
+        </view>
+
+        <!-- 时间，状态 -->
+        <view class="time_state common gonggong">
+          <view class="left leftcommon">{{item.createTime}}</view>
+          <view class="right">
+            <view class="state" wx:if='{{item.status == 0}}'>未处理</view>
+            <view class="state" wx:if='{{item.status == 1}}'>已处理 /</view>
+            <view class="huifu" wx:if='{{item.status == 1}}' bindtap="huifu" data-index="{{index}}">查看回复</view>
+          </view>
+        </view>
+      </view>
+      <view class="aa"></view>
+    </block>
+  </scroll-view>
+
+  <!-- 回复弹窗 -->
+  <van-popup show="{{ show }}" bind:click-overlay='onclose'>
+    <view class="huifu_content">
+      <view class="huifu_time commonss">
+        <view class="huifu_left">回复时间:</view>
+        <view class="huifu_right">{{huifutimes}}</view>
+      </view>
+
+      <view class="huifu_cont commonss">
+        <view class="huifu_left">回复内容:</view>
+        <view class="huifu_right">{{content}}</view>
+      </view>
+    </view>
+  </van-popup>
+  
+</view>

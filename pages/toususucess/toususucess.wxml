@@ -1,0 +1,9 @@
+<view>
+  <view class="sucess_cont">
+    <view class="img"><image src="../../images/icon/sucess.jpg"></image></view>
+    <view class="chenggong">投诉已提交</view>
+    <view class="tishi">我们会尽快处理您的投诉</view>
+  </view>
+
+  <view class="shouye" bindtap="shouye">点击查看投诉详情</view>
+</view>

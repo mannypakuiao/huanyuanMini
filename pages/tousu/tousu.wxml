@@ -1,0 +1,42 @@
+<!-- 投诉处理 -->
+<view class="tousu_paoma">
+  <swiper vertical='true' autoplay="true" interval='3000' circular='true' class='news_content'>
+    <block wx:for="{{noticelist}}" wx:key="{{index}}">
+      <swiper-item class='toushu_li'>
+        <view class="left">
+          <image src="../../images/touxiang2.png"></image>
+          <view class="cont">{{item.contacts}}的建议 {{item.createTime}}</view>
+        </view>
+        <view class="tousu_banjie">意见处理</view>
+      </swiper-item> 
+    </block>
+  </swiper>
+</view>
+
+<view class='tousu_content'>
+  <!-- 在线投诉 -->
+  <view class="zaixian_content tousus" bindtap="zaixian">
+    <view class="cotent_desc">
+      <view class="zaixian_left img"><image src="../../images/icon/zaixiantousu.png"></image></view>
+      <view class="zaixian_right right">
+        <view class="title">在线建议</view>
+        <view class="tousu_desc">快速通道</view>
+        <view class="tousu_desc">一键提交建议</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 电话投诉 -->
+  <view class="dianhua_content tousus" bindtap="lianxi">
+    <view class="cotent_desc">
+      <view class="dianhua_left img"><image src="../../images/icon/zaixiantousu.png"></image></view>
+      <view class="dianhua_right right">
+        <view class="title">热线联系</view>
+        <view class="tousu_desc">一键热线</view>
+        <view class="tousu_desc">7×24小时为您服务</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="guanfang">中国翰园官方投诉平台,全城为您保驾护航</view>
+</view>

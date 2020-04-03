@@ -1,0 +1,47 @@
+<view class='banner'>
+  <image src="{{imgUrl}}"></image>
+</view>
+
+<view class="ticketorder_content">
+  <view class="ticketorder_desc">
+    <!-- 中国翰园碑林 -->
+    <view class="one">
+      <view class="ticketorder_title fle">
+        <view class="titles">{{name}}</view>
+        <view class="times">8:30-18:00 开放</view> 
+      </view>
+
+      <!-- <view class="jiage">{{productInfo.productName}} ￥{{productInfo.salePrice}}</view> -->
+    </view>
+
+    <!-- 门票类型 -->
+    <block wx:for='{{tickets}}' wx:key='{{index}}'>
+      <view class="jieshao">
+        <view class="menpiao_left">
+          <view class="type_name">{{item.productName}}</view>
+          <view class="titles_name">{{name}}</view>
+          <view class="type_desc">
+            <view class="desc">一码通</view>
+            <view class="desc">可订今日票</view>
+          </view>
+        </view>
+
+        <view class="menpiao_right">
+          <view class="right_ront">
+            <view class="shiji_money">￥{{item.salePrice}}</view>
+            <view class="yuanlai_moneg">￥{{item.marketPrice}}</view>
+            <button class="shopping" open-type="getUserInfo" bindgetuserinfo="getUserinfo" data-productcode="{{item.productCode}}">购买</button>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <!-- 景区介绍 -->
+    <view class="jingqu_jieshao">
+      <view class="jieshao_title">景区介绍</view>
+      <text decode="{{true}}">
+        &ensp;&ensp;&ensp;{{introduction}}
+      </text>
+    </view>
+  </view>
+</view>

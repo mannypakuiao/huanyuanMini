@@ -1,0 +1,19 @@
+<view class='information'>
+  <view class='touxiang'>
+    <image src='{{img}}'></image>
+  </view>
+  <view class='informationCont'>
+    <button class='phone1' open-type="getUserInfo" bindgetuserinfo="getUserinfo" >{{nickname}}</button>
+  </view>
+</view>
+
+<view class='zhanwei'></view>
+
+<view class='forms'>
+  <block wx:for='{{list}}' wx:key='{{index}}'> 
+    <view class='list' bindtap='common' data-index='{{index}} '>
+      <image src='{{item.img}}'></image>
+      <view class='inpt'>{{item.title}}</view>
+    </view>
+  </block>
+</view>

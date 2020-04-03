@@ -1,0 +1,48 @@
+<view class='order_content'>
+  <!-- 暂无数据 -->
+  <noData wx:if="{{nodata == 1}}"></noData> 
+  <view class="dianwo" bindtap="dianwo">点我刷新</view>
+  <scroll-view scroll-y='true' class="yscroll_bar" enable-back-to-top="{{true}}" bindscrolltolower="loadMore"
+     style='height:{{windowHeight}}px'>
+    <block wx:for='{{list}}' wx:key='{{index}}'>
+      <view class="order_li">
+        <view class="cick" bindtap="orderdetail" data-paystatus="{{item.payStatus}}" data-orderno="{{item.orderNo}}" data-realprice="{{item.realPrice}}" data-createdtime="{{item.createdTime}}" data-ordername="{{item.orderName}}" data-itco="{{item.isTicketOut}}"> 
+          <view class="order_state">
+            <view class="left">
+              <view class="img"><image src="../../images/icon/mp.png"></image></view>
+              <view class="menpiao">{{item.merchantCode == 004 ? '车票':'门票'}}</view>
+            </view>
+
+            <view class="right {{item.payStatus == 1? 'col':''}}" wx:if="{{item.payStatus == 1}}">等待支付</view>
+            <view class="right {{item.payStatus == 2? 'col':''}}" wx:if="{{item.payStatus == 2}}">等待支付</view>
+            <view class="right {{item.payStatus == 6? 'hui':''}}" wx:if="{{item.payStatus == 6}}">已退款</view>
+            <view class="right" wx:if="{{item.payStatus == 3}}">已支付</view>
+
+          </view>
+           <!-- 出票状态 -->
+          <view class="chupiao_status {{item.isTicketOut != -1? 'lvse':''}}" wx:if="{{item.payStatus == 3 && item.isTicketOut == 1}}">出票成功</view>
+          <view class="chupiao_status {{item.isTicketOut == -1? 'hongse':''}}" wx:if="{{item.payStatus == 3 && item.isTicketOut == -1}}">出票失败</view>
+          <view class="chupiao_status {{item.isTicketOut == -1? 'hongse':''}}" wx:if="{{item.payStatus == 3 && item.isTicketOut == 0}}">出票中</view>
+          <view class="order_desc">
+            <view class="order_title">{{item.orderName}}</view>
+            <view class="order_date ziti">日期： {{item.createdTime}}</view>
+            <view class="order_usedate ziti">使用日期： {{item.useDate}}</view>
+            <view class="order_number">
+              <view class="order_number_left ziti">数量： {{item.ticketsCnt}}张</view>
+              <view class="order_number_right">￥{{item.realPrice}}</view>
+            </view>
+          </view>
+        </view>
+
+        <view class="order_btn" wx:if="{{item.payStatus == 1 || item.payStatus == 2}}">
+          <view class="btn_cont">
+            <view class="order_quxiao_btn" bindtap="deleteorder" data-orderno="{{item.orderNo}}">取消订单</view>
+            <view class="order_zhifu_btn" bindtap="zhifu" data-orderno="{{item.orderNo}}">立即支付</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+

@@ -1,0 +1,99 @@
+@import '../../style/weui.wxss';
+.weui-cell {
+  height: 28rpx;
+}
+.weui-select{
+  border-right: 1rpx solid #fff;
+  font-size: 33rpx;
+  padding-left: 0rpx;
+}
+.one{
+  border-bottom: 2rpx solid rgb(238, 238, 238);
+}
+.ciys{
+  color: rgb(177, 177, 177);
+}
+.pick{
+  padding: 0 !important;
+}
+.weui-cell{
+  border-bottom: 2rpx solid rgb(238, 238, 238) !important;
+}
+.weui-cell:before{
+  border-top: 1rpx solid #fff;
+}
+/* 上传证据 */
+.jiuzhenren_add{
+  /* height: 250rpx; */
+  background: #fff;
+  border-bottom: 2rpx solid rgb(207, 207, 207);
+}
+.jiuzhenren_title{
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  font-size: 33rpx;
+}
+.jiuzhenren_li{
+  display: flex;
+  justify-content: flex-star;
+  flex-wrap: wrap;
+  /* height: 140rpx; */
+  padding-left: 25rpx;
+  margin-top: 10rpx;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+.zhanwei{
+  width: 40rpx;
+  height: 100%;
+}
+.raduis{
+  background: #fff;
+  border: 2rpx solid rgb(207, 207, 207);
+  width: 120rpx;
+  height: 120rpx;
+  margin-top: 20rpx;
+}
+.img{
+  position: relative;
+  width: 19%;
+  height: 120rpx;
+  margin-top: 20rpx;
+}
+.img image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.van-icon{
+  position: absolute !important;
+  right: 7rpx;
+  top: -10rpx;
+  background: #c8a468;
+  border-radius: 50%;
+}
+
+/* 事发地 */
+
+/* 留言 */
+.liuyan{
+  padding: 32rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid rgb(238, 238, 238);
+}
+textarea{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.tes{
+  font-size: 26rpx;
+}
+/* 按钮 */
+.btn{
+  width: 90%;
+  margin: auto;
+  background: #c8a468;
+  color: #fff;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}

@@ -1,0 +1,9 @@
+<view>
+  <view class="sucess_cont">
+    <view class="img"><image src="../../images/icon/sucess.jpg"></image></view>
+    <view class="chenggong">支付成功</view>
+    <view class="tishi">"温馨提示" : 请到个人中心-我的订单中查看订单详情</view>
+  </view>
+
+  <view class="shouye" bindtap="shouye">查看订单</view>
+</view>

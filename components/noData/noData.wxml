@@ -1,0 +1,6 @@
+<view class="noData">
+  <view class="nodata_content">
+    <view class="imgas"><image src="../../images/nodata.png"></image></view>
+    <view class="noData_desc">暂无数据</view>
+  </view>
+</view>

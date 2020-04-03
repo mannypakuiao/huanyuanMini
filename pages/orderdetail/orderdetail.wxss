@@ -1,0 +1,201 @@
+
+
+
+/* 顶部 */
+.col{
+  color: orange;
+  font-weight: 800;
+}
+.top{
+  padding: 40rpx 20rpx;
+  box-sizing: border-box;
+  height: 150rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid rgb(221, 221, 221);
+  color: #5d3f23;
+}
+.topziti{
+  font-size: 38rpx;
+}
+.oder_number{
+  font-size: 30rpx;
+}
+
+/* 门票 */
+.menpiao_content{
+  padding: 40rpx 20rpx;
+  border-bottom: 2rpx solid rgb(221, 221, 221);
+  font-size: 33rpx;
+  color: #5d3f23;
+}
+.menpiao_li{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60rpx;
+}
+.menpiao_li_left{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.img{
+  height: 55rpx;
+  width: 55rpx;
+}
+.menpiao_li_left image{
+  width: 55rpx;
+  height: 55rpx;
+}
+.erweima{
+  width: 40rpx;
+  height: 40rpx;
+}
+.erweima image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.jingqu_title{
+  margin-left: 20rpx;
+  font-size: 36rpx;
+  margin-top: 10rpx;
+}
+.marg{
+  margin-top: 30rpx;
+}
+
+/* 温馨提示 */
+.tishi_content{
+  padding: 40rpx 20rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid rgb(221, 221, 221);
+}
+.tishi_title{
+  font-size: 35rpx;
+}
+.tishi_desc{
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+.star_time{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 40rpx;
+}
+.tishi_xinxi{
+  color: rgb(155, 155, 155);
+  width: 20%;
+}
+.tishi_con{
+  width: 78%;
+  letter-spacing: 3rpx;
+}
+
+/* 出行人信息 */
+.chuxingren_content{
+  padding: 40rpx 20rpx;
+}
+.chuxingren_title{
+  font-size: 35rpx;
+}
+.chuxingren_desc{
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  color: rgb(155, 155, 155);
+}
+.two{
+  margin-top: 20rpx;
+}
+
+
+/* 再次预定，退款 */
+.btn_content{
+  background: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  height: 100rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+  border-top: 2rpx solid rgb(221, 221, 221);
+  align-items: center;
+}
+.phones{
+  width: 20%;
+  text-align: center;
+}
+.shuamas{
+  width: 500rpx;
+}
+.aa{
+  height: 70rpx;
+  text-align: center;
+  /* width: 49%; */
+  font-size: 30rpx;
+  border: 2rpx solid rgb(194, 194, 194);
+  box-sizing: border-box; 
+  line-height: 70rpx;
+  border-radius: 10rpx;
+}
+.tuikuan{
+  /* float: right;
+  margin-left: 20rpx; */
+  background: #c8a468; 
+  color: #fff;
+}
+.btn{
+  width: 80%;
+  margin: auto;
+  /* display: flex; */
+}
+/* 申请退款弹出层 */
+.tuikuan_content{
+  padding: 80rpx 40rpx;
+  box-sizing: border-box;
+  text-align: center;
+  width: 500rpx;
+}
+.tuikuan_desc{
+  font-size: 30rpx;
+  color: rgb(143, 143, 143);
+  margin-top: 20rpx;
+}
+.tuikuan_btn{
+  background: #c8a468;
+  padding: 20rpx 100rpx;
+  box-sizing: border-box;
+  color: #fff;
+  border-radius: 10rpx;
+  width: 100%;
+  margin-top: 40rpx;
+}
+.swiper-item{
+  width: 500rpx;
+  height: 500rpx;
+}
+.piao{
+  text-align: center;
+}
+.chepiao_title{
+  text-align: center;
+}
+.tishi{
+  color: red;
+  text-align: center;
+}
+.shuaxin_content{
+  display: flex;
+  justify-content: space-between;
+}
+.shuaxin{
+  font-size:33rpx;
+  padding:5rpx 20rpx;
+  color:#fff;
+  background:#c8a468;
+  border-radius:5rpx;
+}

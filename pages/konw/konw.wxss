@@ -1,0 +1,114 @@
+page{
+  position: relative;
+  
+}
+.content{
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.content_titles{
+  font-size: 45rpx;
+  color: #5d3f23;
+  letter-spacing: 4rpx;
+}
+.money{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 40rpx;
+  align-items: center;
+}
+.money_left{
+  color: red;
+  font-size: 33rpx;
+}
+.money_right{
+  color: rgb(148, 148, 148);
+  text-decoration: line-through;
+  font-size: 27rpx;
+  margin-left: 20rpx;
+}
+
+/* 预定说明 */
+.mar{
+  margin-top: 40rpx;
+  position: relative;
+  display: flex;
+}
+.com{
+  line-height: 59rpx;
+  font-size: 38rpx;
+  color: #000;
+  letter-spacing: 4rpx;
+  width: 30%;
+}
+.aa{
+ width: 68%;
+ font-size: 28rpx;
+ line-height: 52rpx;
+ letter-spacing: 4rpx;
+ color: rgb(122, 122, 122);
+}
+.yuedu{
+  /* position: absolute;
+  bottom: 0; */
+  width: 100%;
+  text-align: center;
+  color: #5d3f23;
+  font-size: 30rpx;
+  font-weight: 800;
+}
+.check{
+  border-top: 2rpx solid rgb(233, 233, 233);
+  background: #fff;
+}
+checkbox .wx-checkbox-input{
+    border-radius: 3rpx;
+    height: 26rpx;
+    width: 26rpx;
+    margin-top: -4rpx;
+    border: 1rpx solid #c8a468;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  background-color: #c8a468;
+  border: 1rpx solid #c8a468;
+}
+
+/* .btn{
+  background: #c8a468;
+  color: #fff;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 100%;
+  margin-top: 20rpx;
+} */
+.btn_content{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  height: 100rpx;
+  text-align: center;
+  align-items: center;
+  line-height: 100rpx;
+}
+.btn_left{
+  background: #fff;
+  width: 50%;
+}
+.btn_right{
+  background: #c8a468;
+  color: #fff;
+  width: 50%;
+}

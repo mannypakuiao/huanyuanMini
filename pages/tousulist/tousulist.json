@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "noData": "../../components/noData/noData",
+    "van-popup": "../../dist/popup/index"
+  },
+  "navigationBarTitleText": "我的投诉"
+}

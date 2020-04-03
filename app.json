@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/person/person",
+    "pages/tousuform/tousuform",
+    "pages/home/home",
+    "pages/konw/konw",
+    "pages/tickettijiao/tickettijiao",
+    "pages/tousu/tousu",
+    "pages/ticketpay/ticketpay",
+    "components/date/index",
+    "pages/myorder/myorder",
+    "pages/orderdetail/orderdetail",
+    "components/noData/noData",
+    "pages/toususucess/toususucess",
+    "pages/gongzhong/gongzhong",
+    "pages/sucess/sucess",
+    "pages/articel/articel",
+    "pages/tousulist/tousulist"
+  ],
+  "tabBar": {
+    "color": "#656565",
+    "selectedColor": "#656565",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabbar/1.png",
+        "selectedIconPath": "images/tabbar/2.png"
+      },
+      {
+        "pagePath": "pages/tousu/tousu",
+        "text": "建议",
+        "iconPath": "images/tabbar/3.png",
+        "selectedIconPath": "images/tabbar/4.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "个人中心",
+        "iconPath": "images/tabbar/5.png",
+        "selectedIconPath": "images/tabbar/6.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#c8a468",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

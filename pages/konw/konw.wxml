@@ -1,0 +1,62 @@
+ <import src="/pages/wxParse/wxParse.wxml"/>
+
+<scroll-view scroll-y style="height: {{listHeight}}px;">
+  <view class='content'>
+    <view class="content_titles">{{name}}门票</view>
+    <view class="money">
+      <view class="money_left">￥{{productInfo.salePrice}}</view>
+      <view class="money_right">￥{{productInfo.marketPrice}}</view>
+    </view>
+
+    <!-- 预定说明 -->
+    <view class="yuding mar">
+      <view class="yuding_title com">预定说明</view>
+      <view class="aa">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"/> 
+      </view>
+    </view>
+
+    <!-- 使用说明 -->
+    <view class="user_shuoming mar">
+      <view class="user_title com">使用说明</view>
+      <view class="aa">
+        <template is="wxParse" data="{{wxParseData:shiyong.nodes}}"/> 
+      </view>
+    </view>
+
+    <!-- 退改说明 -->
+    <view class="tuigai mar">
+      <view class="tuigai_title com">退改说明</view>
+      <view class="aa">
+         本产品支持30天内随时退，预定付款后未使用，可在"个人中心-我的订单"中申请退款，且不收取任何手续费。
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+  <!-- 阅读须知 -->
+  <!-- <view class="yuedu">
+    <checkbox-group bindchange="checkboxChange" class='check'>
+      <label class="checkbox">
+        <checkbox/><span>已阅读预定须知</span>
+      </label>
+    </checkbox-group>
+
+    <view class="btn" bindtap="ordertijiao">立即购买￥{{productInfo.salePrice}}</view>
+  </view>  -->
+
+<view class="btn_content">
+
+  <view class="btn_left">
+    <checkbox-group bindchange="checkboxChange" class='check'>
+      <label class="checkbox">
+        <checkbox/><span>已阅读预定须知</span>
+      </label>
+    </checkbox-group>
+  </view>
+
+  <view class="btn_right" bindtap="ordertijiao">
+    立即购买￥{{productInfo.salePrice}}
+  </view>
+</view>
+

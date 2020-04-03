@@ -1,0 +1,101 @@
+<view class='page_content'>
+  <!-- top -->
+  <view class="titles_content">
+    <view class="title">{{name}}({{productName}})</view>
+    <view class="jingqu_li_desc_content">
+      <view class="jingqu_li_desc">一码通</view>
+      <view class="jingqu_li_desc">可订今日票</view>
+    </view>
+  </view>
+
+  <!-- moddle -->
+  <view class="moddle_date">
+    <!-- 使用日期 -->
+    <view class="date_content">
+      <view class="date_title">
+        <view class="blo"></view>
+        <view class="datetitle">使用日期 {{date}}</view>
+      </view>
+
+      <view class="date_ul">
+        <block wx:for='{{riqi}}' wx:key='{{index}}'>
+          <view class="date_li {{dateliindex == index? 'activec':''}}" bindtap="rilishow" data-index="{{index}}">
+            <view class="date_desc">{{item.sDate}}</view>
+            <view class="date_money {{dateliindex == index? 'activec':''}}">￥{{item.price}}</view>
+          </view>
+        </block>
+        <view class="date_li {{dateliindex == index? 'activec':''}}" bindtap="rilishow" data-index="3">
+          <view class="date_desc">更多</view>
+          <view class="date_money {{dateliindex == index? 'activec':''}}"> >> </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 购买数量 -->
+    <view class="shop_number">
+      <view class="blo"></view>
+      <view class="shop_title">购买数量</view>
+      <view class="jinbuqi">
+        <van-stepper value="{{ values }}" integer='{{true}}' min="1" max="40" bind:change="onChange" bind:plus="onPlus" bind:minus="onMinus"/>
+      </view>
+    </view>
+  </view>
+  
+  <!-- bottom -->
+  <view class="person_content">
+    <view class="date_title lianxi">
+      <view class="blo"></view>
+      <view class="datetitle">联系人信息</view>
+    </view>
+
+    <van-cell-group>
+      <van-field required value="{{ value }}" label="取票人" placeholder="请输入用户名" border="{{ false }}" bind:blur="onblur1"/>
+      <van-field required value="{{ value }}" label="手机号" type='number' placeholder="填写手机号" border="{{ false }}" bind:blur="onblur2"/>
+      <van-field required value="{{ value }}" label="身份证" type='carid' placeholder="填写身份证号" border="{{ false }}" bind:blur="onblur3"/>
+    </van-cell-group>
+  </view>
+
+  <!-- 弹出层日历 -->
+  <van-popup show="{{ show }}" position="bottom" overlay="{{ true }}" bind:click-overlay="onClose">
+    <view class="canlendarBgView">
+      <view class="canlendarView">
+        <view class="canlendarTopView">
+          <view class="leftBgView" bindtap="handleCalendar" data-handle="prev">
+            <view class="leftView">《</view>
+          </view>
+          <view class="centerView">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
+          <view class="rightBgView" bindtap="handleCalendar" data-handle="next">
+            <view class="rightView">》</view>
+          </view>
+        </view>
+        <view class="weekBgView">
+          <view class="weekView" wx:for="{{weeks_ch}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
+        </view>
+        <view class="dateBgView">
+          <view wx:if="{{hasEmptyGrid}}" class="dateEmptyView" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}">
+          </view>
+          <view class="dateView {{index == todayIndex ? 'dateSelectView' : ''}}" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="dateSelectAction" data-day1="{{item}}">
+            <view class="datesView {{index == todayIndex ? 'dateSelectView' : ''}}">{{item}}</view>
+           
+             <block wx:for='{{pricedays}}' wx:key='{{index}}' wx:for-item="itemName" wx:for-index="index2">
+                <view wx:if='{{item==itemName.day && cur_year==itemName.year && cur_month==itemName.mon}}' class="rili_money {{index2 == todayIndex2 ? 'whit' : ''}}" bindtap="dateSelectAction2" data-price="{{itemName.price}}" data-index="{{index2}}" data-day2="{{itemName.day}}">
+                  <span>￥{{itemName.price}}</span>
+                </view>
+             </block>
+          </view>
+        </view>
+      </view>
+    </view>
+  </van-popup>
+  
+  <!-- 提交订单 -->
+  <view class="oder">
+    <view class="order_left">
+      <span class='aa'>订单金额：</span>￥{{selectPrice}}
+    </view>
+
+    <button class="order_right" bindtap="submit" disabled="{{zhuantai}}">
+      提交订单
+    </button>
+  </view>
+</view>

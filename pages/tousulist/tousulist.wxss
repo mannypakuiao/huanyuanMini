@@ -1,0 +1,74 @@
+.tousu_li{
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.tow{
+  display:  flex;
+  justify-content: flex-start;
+  border-bottom: 2rpx solid rgb(230, 230, 230);
+}
+.left{
+  color: rgb(170, 170, 170);
+  font-size: 30rpx;
+}
+.state{
+  font-size: 30rpx;
+  color: rgb(170, 170, 170);
+  margin-right: 8rpx;
+}
+.rightcommon{
+  font-size: 29rpx;
+  letter-spacing: 3rpx;
+}
+.common{
+  display: flex;
+  justify-content: space-between;
+}
+.right{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.right image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.rightcommon{
+  margin-left: 40rpx;
+  width: 70%;
+}
+.gonggong{
+  padding: 20rpx 0rpx;
+}
+.aa{
+  width: 100%;
+  height: 10rpx;
+  background: rgb(236, 236, 236);
+  margin-top: -20rpx;
+}
+.huifu{
+  font-size: 30rpx;
+  color: green;
+}
+/* 回复弹窗 */
+.commonss{
+  display: flex;
+  justify-content: flex-start;
+  padding: 20rpx;
+  box-sizing: border-box;
+  
+}
+.huifu_time{
+  border-bottom: 2rpx solid rgb(230, 230, 230);
+}
+.huifu_right{
+  margin-left: 20rpx;
+  width: 68%;
+}
+.huifu_content{
+  font-size: 30rpx;
+  
+  min-width: 500rpx;
+  min-height: 300rpx;
+}

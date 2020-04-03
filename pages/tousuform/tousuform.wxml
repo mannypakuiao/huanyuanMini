@@ -1,0 +1,65 @@
+<!-- 表单 -->
+<form bindsubmit="formSubmit" class="forms">
+  <!-- 主题 -->
+  <view class="weui-cell">
+    <view class="weui-cell__hd">
+        <view class="weui-label">建议主题</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
+        <view class="weui-select xiala">{{accounts[accountIndex]}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <!-- 投诉原因 -->
+  <view class='liuyan'>
+    <view class="tousuyuanyin">您的建议</view>
+    <textarea bindinput='bindTextAreaChange' placeholder="如果对我们有好的建议,请留言" placeholder-class='tes'></textarea>
+  </view>
+  
+  <!-- 上传证据 -->
+  <view class="jiuzhenren_add">
+    <view class="jiuzhenren_title">上传照片</view>
+
+    <view class="jiuzhenren_li">
+      <block wx:for='{{imglist}}' wx:key='{{index}}'>
+        <view class="img {{index > 0 ? 'mar':''}}">
+          <image src="{{item}}"></image>
+          <van-icon name="cross" color='#fff' bind:click='close' data-index="{{index}}"/>
+        </view>
+        <view class="zhanwei"></view>
+      </block>
+
+      <view class="weui-uploader__input-box raduis">
+        <view class="weui-uploader__input" bindtap="chooseImage"></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 联系人 -->
+  <view class="weui-cell">
+    <view class="weui-cell__hd">
+        <view class="weui-label">联系人</view>
+    </view>
+    <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="请添加联系人" placeholder-class="titles" bindinput="username"/>
+    </view>
+  </view>
+
+  <!-- 联系方式 -->
+  <view class="weui-cell ">
+    <view class="weui-cell__hd">
+      <view class="weui-label">联系方式</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请填写电话" placeholder-class="titles" bindinput="phone" type='number'/>
+    </view>
+  </view>
+
+
+  <!-- 按钮 -->
+  <form bindsubmit="formSubmit">
+    <button type="submit" form-type="submit" class="btn">提交</button>
+  </form>
+</form>

@@ -1,0 +1,42 @@
+<view class='page_content'>
+  <!-- top -->
+  <view class="top">
+    <view class="top_title">待付款</view>
+    <view class="top_desc">请在30分钟内支付</view>
+  </view>
+
+  <!-- moddle -->
+  <view class="moddle">
+    <view class="moddle_cont">
+      <view class="top_one">订单编号：{{ordernumber}}</view>
+      <view class="top_two">下单时间：{{createDate}}</view>
+      <view class="top_three">订单总价：￥{{orderInfo.realPrice}}</view>
+    </view>
+  </view>
+
+  <!-- bottom -->
+  <view class="bottom">
+    <view class="bottom_left_ul">
+      <block wx:for='{{orderdesc}}' wx:key="{{index}}">
+        <view class="bottom_left_li">{{item}}</view>
+      </block>
+    </view>
+
+    <view class="bottom_right_ul">
+      <view class="bottom_right_li">{{merchantInfo.address}}</view>
+      <view class="bottom_right_li">请到售票处换取入园凭证</view>
+      <view class="bottom_right_li">{{useDate}}</view>
+      <view class="bottom_right_li">{{orderInfo.ticketsCnt}}</view>
+      <view class="bottom_right_li">未消费可随时申请退款。</view>
+      <view class="bottom_right_li">{{orderInfo.contactName}}</view>
+      <view class="bottom_right_li">{{orderInfo.contactPhone}}</view>
+      <view class="bottom_right_li">{{orderInfo.contactIdNumber}}</view>
+    </view>
+  </view>
+
+
+  <!-- 继续支付 -->
+  <form bindsubmit="formSubmit">
+    <button disabled="{{chongfusubmit}}" type="submit" form-type="submit">支付订单</button>
+  </form>
+</view> 

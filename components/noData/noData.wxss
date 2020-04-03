@@ -1,0 +1,25 @@
+/* components/noData/noData.wxss */
+.nodata_content{
+  height: 40%;
+  width: 90%;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+}
+.imgas{
+  width: 426rpx;
+  height: 400rpx;
+  margin: auto;
+}
+.nodata_content image{
+  width: 426rpx;
+  height: 400rpx;
+}
+.noData_desc{
+  text-align: center;
+  font-size: 36rpx;
+  color: rgb(167, 167, 167);
+  margin-top: 20rpx;
+}
